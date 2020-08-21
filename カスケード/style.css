@@ -1,0 +1,34 @@
+/* おなじ指定方法なら後ろのやつが優先される
+h1{
+  color:red;
+}
+h1{
+  color:blue;
+} */
+
+/* セレクターが異なる場合、詳細度が高いほうが優先される
+#title{
+  color:red;
+}
+.a{
+  color:blue;
+}
+h1{
+  color:green;
+} */
+
+/* ただしstyle属性が最強。詳細度スコアは、たとえば100もってたら10がいくら束になっても勝てん。!importantはスコアを無効化するじゃじゃ馬。あんま使わんほうがいい。 */
+
+/* inheritは、親要素の色が反映.initialはブラウザ上のデフォルト値。unsetはinheritする対象があればinheritに、なければinitialに化ける。
+li{
+  color:red;
+}
+li a[href*="google"]{
+  color:inherit;
+}
+li a[href*="#"]{
+  color:initial;
+}
+li a[href*="apple"]{
+  color:unset;
+} */
