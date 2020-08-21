@@ -1,0 +1,90 @@
+/*要素を直接指定 
+h1,p {
+  color:red;
+  background-color: rgb(250, 114, 198);
+} */
+
+/* 要素の中にclass属性を作って指定
+.title{
+  color:rebeccapurple;
+  background-color: red; 
+}*/
+
+/* 全部の要素に適用
+* {
+  color:red;
+} */
+
+/*属性に対して指定 
+a[href]{
+  color:red;
+} */
+
+/*属性値の中身を選んで指定
+ a[href="#"]{
+  color:red;
+} */
+/* =の後に^をつけて、前方一致
+*をつけて、部分一致
+$をつけて、後方一致 */
+
+/* articleの次に来る最初のpタグを指定
+article p:first-of-type {
+  color:red;
+} */
+
+/* articleの次に来る要素がpタグの時しか使えん
+article p:first-child {
+  color:red;
+} */
+
+/*()内の数字番目のpタグのみ指定
+ article p:nth-of-type(2) {
+  color:red;
+} */
+
+/* ()内以外のpタグを指定
+article p:not(:first-of-type){
+  color:red;
+} */
+
+/* カーソルが乗ったときのみ反映。:not()で否定も可
+p:hover {
+  background-color: rgb(181, 105, 252);
+} */
+
+/* h1の後ろにテキストを追加。beforeで前に追加。
+h1::after{
+  content:"!!!!!!!"
+} */
+
+/* pタグの最初の行だけ
+p::first-line{ 
+  color:red;
+} */
+
+/* pタグの最初の文字だけ
+::first-letter{
+  color:red;
+  font-size: 50px;
+} */
+
+/*mainの中のarticleの中のh1だけ指定。長すぎるとダメ
+ main article h1{
+  color:red;
+} */
+
+/* main直下のh1のみを指定
+main > h1{
+  color:red;
+} */
+
+/* pの次のpから、要は2番目からだけ
+article p + p{
+  color:red;
+} */
+
+/* h1より下のpタグだけ指定
+article h1 ~ p{
+  color:red;
+} */
